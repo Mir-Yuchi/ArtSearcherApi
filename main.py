@@ -36,6 +36,10 @@ def run():
               "\nName given to a work of art:", object_info["title"], "\nDepartment is:", object_info["department"],
               "\nArt is about", object_info["culture"], object_info["objectName"],
               "\nArt located in:", object_info["repository"], "\nLink to Wikidata:", object_info["objectWikidata_URL"])
+        if total_ids == 1:
+            print("\t\t\t\t\tNO MORE ARTS :(\n"
+                  "\t\t\t\t\tTHANK YOU FOR USING :)", )
+            return
         need_continue = input("\tDo you want to see next art of the same object? (Yes/No): ").lower()
         if need_continue == "yes":
             object_id += 1
